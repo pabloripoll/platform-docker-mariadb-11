@@ -167,13 +167,13 @@ innodb_flush_method     = O_DIRECT
 [mysqldump]
 quick
 quote-names
-max_allowed_packet      = 16M
+max_allowed_packet = 16M
 
 [mysql]
 #no-auto-rehash # faster start of mysql but no tab completion
 
 [isamchk]
-key_buffer         = 16M
+key_buffer = 16M
 
 #
 # * Galera-related settings
@@ -189,7 +189,7 @@ key_buffer         = 16M
 #
 # Allow server to accept connections on all interfaces.
 #
-#bind-address=0.0.0.0
+bind-address=0.0.0.0
 #
 # Optional setting
 #wsrep_slave_threads=1
