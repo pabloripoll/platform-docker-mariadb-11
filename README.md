@@ -68,12 +68,13 @@ Repository directories structure overview:
 │   │
 │   ├── automation
 │   │   ├── local
-│   │   │   └── Makefile
+│   │   │   ├── Makefile.child      # Sub-repository Makefile starter
+│   │   │   └── Makefile            # Repository root Makefile
 │   │   └── remote
 │   │       └── ...
 │   ├── databases
-│   │   ├── pgsql-backup.sql
-│   │   └── pgsql-init.sql
+│   │   ├── mariadb-backup.sql
+│   │   └── mariadb-init.sql
 │   └── docs
 │       └── images
 │           ├── pr-banner-long.png
@@ -88,20 +89,9 @@ Repository directories structure overview:
 
 Set up platform:
 
-- Copy `.env.example` to `.env` to adjust platforms settings
-- The database container can start with `DATABASE_CAAS_MEM=128M` *(CAAS = Container As A Service)*
-
-### Estimated consumption
-
-This is the overview of the estimated host machine consumption:
-- *Your local values could be slightly different*
-- *(?) Your custom project abbreviation*
-```
-$ sudo docker stats
-
-CONTAINER ID   NAME           	CPU %   MEM USAGE / LIMIT   MEM %   NET I/O         BLOCK I/O         PIDS
-4afa058af7a9   (?)-mariadb-dev	0.04%   21.23MiB / 128MiB   16.59%  1.17kB / 126B   1.47MB / 59.5MB   6
-```
+- Copy `./resources/automation/local/Makefile` to `./Makefile` to run automated commands GNU Make recipes
+- Copy `.env.example` to `.env` to adjust platforms environments settings
+- The database container can start with minimum of 512 megas: `DATABASE_CAAS_MEM=512M` *(CAAS = Container As A Service)*
 <br>
 
 ## Contributing
@@ -110,7 +100,7 @@ Contributions are very welcome! Please open issues or submit PRs for improvement
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/YourFeature`)
-3. Commit your changes (`git commit -am 'feat: Add new feature'`)
+3. Commit your changes (`git commit -am 'feat: new feature added'`)
 4. Push to the branch (`git push origin feature/YourFeature`)
 5. Create a new Pull Request
 <br><br>
