@@ -1,3 +1,5 @@
 # .gitignore custom settings
-/docker/.env
-/data
+docker/.env
+docker/data
+docker/root
+docker/config
