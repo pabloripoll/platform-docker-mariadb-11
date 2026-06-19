@@ -8,14 +8,14 @@
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](./)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-# MariaDB 11.8
+# MariaDB 11
 <br>
 
 This Infrastructure Platform repository is designed for back-end projects and provides three separate platforms:
 
 ## Platforms for Full-Stack Project
 
-- Database: [MariaDB 11.8](./platforms/mariadb-11.8/README.md)
+- Database: [MariaDB 11](./platforms/mariadb-11/README.md)
 <br><br>
 
 
@@ -163,7 +163,7 @@ Repository directories structure overview
 ├── platforms                   # remote infrastructure platforms
 │   ├── ...(backend platform)
 │   │
-│   ├── mariadb-11.8
+│   ├── mariadb-11
 │   │   ├── docker
 │   │   │   ├── .env
 │   │   │   ├── docker-compose.yml
